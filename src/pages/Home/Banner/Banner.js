@@ -39,9 +39,9 @@ const Banner = () => {
                             </Carousel.Item>
                         </Carousel>
                     </Col>
-                    <Col className='my-auto' lg={6}>
-                        <h1 className='display-1 fw-bolder'>We ensure product quality and quantity</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quod illum quas velit inventore placeat. Aut autem laudantium sapiente dolore maxime alias asperiores, rerum voluptas sed sit? Quia voluptatibus quidem vero officiis omnis tenetur laboriosam pariatur facere nulla delectus provident porro molestiae hic at magni similique earum fugit, tempore, itaque quibusdam? Obcaecati ea deserunt .</p>
+                    <Col className='my-auto px-3' lg={6}>
+                        <h1 className='display-1 fw-bolder text-warning'>We ensure product quality and quantity</h1>
+                        <p className='fs-4 text-justify'>Fruits Valley is a reliable warehouse that not only ensure the best quality stock but also ensure the accurate inventory over the years. We have Capacity of 15000 tons unpacked cold storage and near about 1 million tons packed fruits. We have our own database and servers with plenty of experts to ensure accurate inventory management. We preserve yearly, monthly, weekly, daily and even per hour stock and ensure that is ready to serve at any time on demand .</p>
                     </Col>
                 </Row>
             </Container>

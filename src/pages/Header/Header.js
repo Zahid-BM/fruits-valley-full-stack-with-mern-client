@@ -4,8 +4,10 @@ import { Button, Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import image4 from '../../images/img-4.png';
+
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -18,7 +20,7 @@ const Header = () => {
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky='top'>
                 <Container fluid>
-                    <Navbar.Brand className='fw-bolder fs-2 text-warning' as={Link} to="/">FRUITS Warehouse</Navbar.Brand>
+                    <Navbar.Brand className='fw-bolder fs-2 text-warning' as={Link} to="/"> <img src={image4} alt="" /> FRUITS Valley</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -28,7 +30,7 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                          
+
                             {/* conditional rendering */}
                             {
                                 user ? <Button onClick={handleLogout} className='text-decoration-none' variant="secondary">Logout</Button> : <LinkContainer to='/login'>
@@ -38,8 +40,8 @@ const Header = () => {
                         </Nav>
 
                     </Navbar.Collapse>
+
                 </Container>
-                <ToastContainer></ToastContainer>
             </Navbar>
         </>
     );
