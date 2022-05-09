@@ -18,7 +18,7 @@ const Header = () => {
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky='top'>
                 <Container>
-                    <Navbar.Brand className='fw-bolder fs-2 text-warning' as={Link} to="/">Zarraf Warehouse</Navbar.Brand>
+                    <Navbar.Brand className='fw-bolder fs-2 text-warning' as={Link} to="/">FRUITS Warehouse</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -28,10 +28,11 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
+                          
                             {/* conditional rendering */}
                             {
                                 user ? <Button onClick={handleLogout} className='text-decoration-none' variant="secondary">Logout</Button> : <LinkContainer to='/login'>
-                                    <NavLink><span className='text-secondary'>Login</span></NavLink>
+                                    <NavLink><span className='text-info'>Login</span></NavLink>
                                 </LinkContainer>
                             }
                         </Nav>
