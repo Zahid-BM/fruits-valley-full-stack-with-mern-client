@@ -11,7 +11,7 @@ const SingleItem = ({ item }) => {
                 <Card className='h-100 shadow'>
                     <Card.Img className='w-100 h-100' variant="top" src={img} />
                     <Card.Body className='p-4 d-flex flex-column'>
-                        <Card.Title className='fw-bold fs-3 mt-3'>{name}</Card.Title>
+                        <Card.Title className='fw-bold fs-3 mt-3 text-danger'>{name}</Card.Title>
                         <Card.Subtitle className='text-muted fs-4 my-3'> Price : $ {price} /kg</Card.Subtitle>
                         <h6>Quantity : {quantity} kgs</h6>
                         <h6 className='mb-5'>Supplier : {supplierName}</h6>
