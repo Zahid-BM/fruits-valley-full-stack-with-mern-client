@@ -5,7 +5,7 @@ const useChart = () => {
     const [chart, setChart] = useState([]);
     useEffect(() => {
         const getReport = async () => {
-            const { data } = await axios.get('http://localhost:5000/report');
+            const { data } = await axios.get('http://fruits-warehouse.herokuapp.com/report');
             setChart(data);
         }
         getReport();

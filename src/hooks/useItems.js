@@ -6,7 +6,7 @@ const useItems = () => {
 
     useEffect(() => {
         const getItems = async () => {
-            const { data } = await axios.get('http://localhost:5000/items');
+            const { data } = await axios.get('http://fruits-warehouse.herokuapp.com/items');
             setItems(data);
         };
         getItems();
