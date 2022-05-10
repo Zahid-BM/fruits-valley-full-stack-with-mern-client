@@ -6,7 +6,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import image4 from '../../images/img-4.png';
+import image4 from '../../images/orange.png';
 
 
 const Header = () => {
@@ -18,9 +18,9 @@ const Header = () => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="secondary" variant="dark" sticky='top'>
+            <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark" sticky='top'>
                 <Container fluid>
-                    <Navbar.Brand className='fw-bolder fs-2 text-warning' as={Link} to="/"> <img src={image4} alt="" /> FRUITS Valley</Navbar.Brand>
+                    <Navbar.Brand className='fw-bolder fs-2 text-white' as={Link} to="/"> <img src={image4} alt="" /> FRUITS Valley</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">

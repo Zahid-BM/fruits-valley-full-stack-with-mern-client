@@ -2,6 +2,7 @@ import React from 'react';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import Banner from './Banner/Banner';
 import DailyReport from './DailyReport';
+import Footer from './Footer';
 import Items from './Items/Items';
 import WarehouseProcess from './WarehouseProcess';
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Items></Items>
             <DailyReport></DailyReport>
             <WarehouseProcess></WarehouseProcess>
+            <Footer></Footer>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import image5 from '../../images/img-5.jpg';
 import image6 from '../../images/img-6.jpg';
 import image7 from '../../images/img-7.jpg';
 import image8 from '../../images/img-8.jpg';
+import image9 from '../../images/continuous-process.png';
 
 
 const WarehouseProcess = () => {
@@ -14,7 +15,7 @@ const WarehouseProcess = () => {
 
                 <Row>
                     <Col className='my-auto  ' lg={4}>
-                        <h3>Key Process</h3>
+                        <h3>Key Process <img src={image9} alt="" /></h3>
                         <ul class="list-group list-group-flush  ">
                             <li class="list-group-item  "><b>Lab Test :</b> We do immediately a lab test to detect harmful objects after i/h.</li>
                             <li class="list-group-item  "><b>Robotic Monitoring :</b> After Lab test we ensure a perfect storage with date wise and Purchase order based chronology. And the whole process is done by robots to save time and increase efficiencies.</li>

@@ -2,13 +2,15 @@ import React from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import useChart from '../../hooks/useChart';
+import appImage1 from '../../images/report(1).png';
+
 
 const DailyReport = () => {
     const [data] = useChart();
     return (
         <>
             <Container className='mt-5 rounded-3'>
-                <h1 className='text-center fw-bold display-4 mb-5'>Weekly Reports of the Warehouse</h1>
+                <h1 className='text-center fw-bold display-4 mb-5'>Weekly Reports of the Warehouse <img src={appImage1} alt="" /></h1>
                 <Row>
                     <Col className='mt-4' lg={6}>
                         <ResponsiveContainer width="100%" aspect={1.4}>
