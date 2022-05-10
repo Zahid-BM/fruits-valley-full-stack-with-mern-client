@@ -6,32 +6,55 @@ import appImage3 from '../../images/facebook(1).png';
 import appImage4 from '../../images/linkedin(1).png';
 import appImage5 from '../../images/twitter(1).png';
 import appImage6 from '../../images/orange.png';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <footer className='bg-danger mt-5 d-flex justify-content-around align-items-center'>
-            <div className='text-center text-white py-5'>
-                <h5>Download our Apps</h5>
-                <img className='m-2' src={appImage1} alt="" />
-                <img className='m-2' src={appImage2} alt="" />
-            </div>
-            <div className='text-center text-white py-5'>
-                All right reserved &copy; Fruits Valley {year}
-                <br />
-                Email address : bmzahidulislam@outlook.com
-                <br />
-                Contact number : +880 1675633294
-                <h4><img src={appImage6} alt="" /><span className='text-warning'>Fruits Valley</span> a reliable Warehouse</h4>
-            </div>
-            <div className='text-center text-white py-5'>
-                <h5>Find us on</h5>
-                <img className='m-2' src={appImage3} alt="" />
-                <img className='m-2' src={appImage4} alt="" />
-                <img className='m-2' src={appImage5} alt="" />
-            </div>
-        </footer>
+        <>
+
+          
+
+            <footer className='bg-danger mt-5 '>
+                <Container fluid>
+                    <Row>
+                        <Col lg={4}>
+                            <div className='text-center text-white py-5'>
+                                <h5>Download our Apps</h5>
+                                <img className='m-2' src={appImage1} alt="" />
+                                <img className='m-2' src={appImage2} alt="" />
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                            <div className='text-center text-white py-5'>
+                                All right reserved &copy; Fruits Valley {year}
+                                <br />
+                                Email address : bmzahidulislam@outlook.com
+                                <br />
+                                Contact number : +880 1675633294
+                                <h4><img src={appImage6} alt="" /><span className='text-warning'>Fruits Valley</span> a reliable Warehouse</h4>
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                            <div className='text-center text-white py-5'>
+                                <h5>Find us on</h5>
+                                <img className='m-2' src={appImage3} alt="" />
+                                <img className='m-2' src={appImage4} alt="" />
+                                <img className='m-2' src={appImage5} alt="" />
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+                </footer>
+                
+          
+
+
+
+
+
+        </>
     );
 };
 
