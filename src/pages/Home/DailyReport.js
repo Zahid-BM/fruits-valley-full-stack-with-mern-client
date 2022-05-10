@@ -7,7 +7,7 @@ const DailyReport = () => {
     const [data] = useChart();
     return (
         <>
-            <Container className='mt-5'>
+            <Container className='mt-5 rounded-3'>
                 <h1 className='text-center fw-bold display-4 mb-5'>Weekly Reports of the Warehouse</h1>
                 <Row>
                     <Col className='mt-4' lg={6}>
@@ -34,8 +34,8 @@ const DailyReport = () => {
                             </BarChart>
                         </ResponsiveContainer>
                     </Col>
-                    <Col lg={6}>
-                        <Table responsive striped bordered hover variant="secondary">
+                    <Col className='my-auto' lg={6}>
+                        <Table responsive striped bordered hover variant="danger">
                             <thead>
                                 <tr>
                                     <th>Day</th>

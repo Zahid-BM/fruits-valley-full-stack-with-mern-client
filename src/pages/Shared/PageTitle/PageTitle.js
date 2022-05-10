@@ -5,7 +5,7 @@ const PageTitle = ({ title, pageColor }) => {
     return (
         <>
             <Helmet>
-                <title>{title} :Fruits Valley</title>
+                <title>{title} : Fruits Valley</title>
                 <body class={pageColor} />
             </Helmet>
 
