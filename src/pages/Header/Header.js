@@ -33,8 +33,8 @@ const Header = () => {
 
                             {/* conditional rendering */}
                             {
-                                user ? <Button onClick={handleLogout} className='text-decoration-none' variant="secondary">Logout</Button> : <LinkContainer to='/login'>
-                                    <NavLink><span className='text-info'>Login</span></NavLink>
+                                user ? <Button onClick={handleLogout} className='text-decoration-none' variant="danger">Logout</Button> : <LinkContainer to='/login'>
+                                    <NavLink><span className='text-white'>Login</span></NavLink>
                                 </LinkContainer>
                             }
                         </Nav>

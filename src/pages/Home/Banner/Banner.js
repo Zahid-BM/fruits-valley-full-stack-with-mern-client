@@ -1,51 +1,87 @@
 import React from 'react';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
-import image1 from '../../../images/img-1.png';
-import image2 from '../../../images/img-2.png';
-import image3 from '../../../images/img-3.png';
+import { Carousel, Container } from 'react-bootstrap';
+import img1 from '../../../images/banner/1.jpg';
+import img2 from '../../../images/banner/2.jpg';
+import img3 from '../../../images/banner/3.jpg';
+import img4 from '../../../images/banner/4.jpg';
+import img5 from '../../../images/banner/5.jpg';
+import img6 from '../../../images/banner/6.jpg';
 
 const Banner = () => {
     return (
-        <div>
-            <Container fluid className='my-4'>
-                <Row>
-                    <Col lg={6}>
-                        <Carousel>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src={image1}
-                                    alt="First slide"
-                                />
 
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src={image2}
-                                    alt="Second slide"
-                                />
+        <Container fluid >
+            <Carousel>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100  "
+                        src={img1}
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Technology based Warehouse</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100  "
+                        src={img2}
+                        alt="Second slide"
+                    />
 
+                    <Carousel.Caption>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Expert Monitoring and managements</h3>
 
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-100"
-                                    src={image3}
-                                    alt="Third slide"
-                                />
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100  "
+                        src={img3}
+                        alt="Third slide"
+                    />
 
+                    <Carousel.Caption>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Faster Unloading and i/h</h3>
 
-                            </Carousel.Item>
-                        </Carousel>
-                    </Col>
-                    <Col className='my-auto px-3' lg={6}>
-                        <h1 className='display-1 fw-bolder text-warning'>We ensure product quality and quantity</h1>
-                        <p className='fs-4 text-justify'>Fruits Valley is a reliable warehouse that not only ensure the best quality stock but also ensure the accurate inventory over the years. We have Capacity of 15000 tons unpacked cold storage and near about 1 million tons packed fruits. We have our own database and servers with plenty of experts to ensure accurate inventory management. We preserve yearly, monthly, weekly, daily and even per hour stock and ensure that is ready to serve at any time on demand .</p>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100  "
+                        src={img4}
+                        alt="Fourth slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Ensure fruits remain fresh</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100  "
+                        src={img5}
+                        alt="Fifth slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Special Port Facilities</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100  "
+                        src={img6}
+                        alt="Sixth slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Fastest delivery on requirements</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+        </Container>
+
     );
 };
 
