@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './pages/Header/Header';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
+import NotFound from './pages/NotFound/NotFound';
 import Register from './pages/Register/Register';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
