@@ -8,7 +8,7 @@ const SingleItem = ({ item }) => {
     const { img, name, price, description, supplierName, stock, quantity } = item;
     return (
         <>
-            <Col className='g-4 hover' lg={4}> {/* hover effect added */}
+            <Col className='g-4' lg={4}> {/* hover effect added */}
                 <Card className='h-100 shadow'>
                     <Card.Img className='w-100 h-100' variant="top" src={img} />
                     <Card.Body className='p-4 d-flex flex-column'>
@@ -23,7 +23,7 @@ const SingleItem = ({ item }) => {
 
 
                         {<Link className='mt-auto' to='/checkout'>
-                            <Button className='w-100 text-white fw-bold' variant="danger">Stock Update <img src={appImage1} alt="" /></Button>
+                            <Button className='w-100 text-white fw-bold  hover1' variant="danger">Stock Update <img src={appImage1} alt="" /></Button>
                         </Link>}
                     </Card.Body>
                 </Card>

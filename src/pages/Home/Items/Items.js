@@ -17,7 +17,7 @@ const Items = () => {
                         items.slice(0, 6).map(item => <SingleItem key={item._id} item={item}></SingleItem>)
                     }
                 </Row>
-                <Link to='/allitems'><Button className='btn-lg mx-auto d-block text-white ' variant='danger'>See all Items <img className='ms-1' src={image2} alt="" /></Button></Link>
+                <Link to='/allitems'><Button className='btn-lg mx-auto d-block text-white my-5 hover1' variant='danger'>See all Items <img className='ms-1' src={image2} alt="" /></Button></Link>
             </Container>
         </div>
     );

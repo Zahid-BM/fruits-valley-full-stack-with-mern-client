@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import appImage1 from '../../images/Appstore.svg';
 import appImage2 from '../../images/playstore.svg';
 import appImage3 from '../../images/facebook(1).png';
@@ -7,6 +6,8 @@ import appImage4 from '../../images/linkedin(1).png';
 import appImage5 from '../../images/twitter(1).png';
 import appImage6 from '../../images/orange.png';
 import { Col, Container, Row } from 'react-bootstrap';
+import '../../pages/common.css';
+
 
 const Footer = () => {
     const today = new Date();
@@ -14,7 +15,7 @@ const Footer = () => {
     return (
         <>
 
-          
+
 
             <footer className='bg-danger mt-5 '>
                 <Container fluid>
@@ -22,8 +23,8 @@ const Footer = () => {
                         <Col lg={4}>
                             <div className='text-center text-white py-5'>
                                 <h5>Download our Apps</h5>
-                                <img className='m-2' src={appImage1} alt="" />
-                                <img className='m-2' src={appImage2} alt="" />
+                                <img className='m-2 hover2' src={appImage1} alt="" />
+                                <img className='m-2 hover2' src={appImage2} alt="" />
                             </div>
                         </Col>
                         <Col lg={4}>
@@ -39,16 +40,16 @@ const Footer = () => {
                         <Col lg={4}>
                             <div className='text-center text-white py-5'>
                                 <h5>Find us on</h5>
-                                <img className='m-2' src={appImage3} alt="" />
-                                <img className='m-2' src={appImage4} alt="" />
-                                <img className='m-2' src={appImage5} alt="" />
+                                <img className='m-2 hover2' src={appImage3} alt="" />
+                                <img className='m-2 hover2' src={appImage4} alt="" />
+                                <img className='m-2 hover2' src={appImage5} alt="" />
                             </div>
                         </Col>
                     </Row>
-                    </Container>
-                </footer>
-                
-          
+                </Container>
+            </footer>
+
+
 
 
 
