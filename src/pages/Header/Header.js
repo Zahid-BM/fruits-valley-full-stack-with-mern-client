@@ -33,9 +33,29 @@ const Header = () => {
 
                             {/* conditional rendering */}
                             {
-                                user ? <Button onClick={handleLogout} className='text-decoration-none' variant="danger">Logout</Button> : <LinkContainer to='/login'>
-                                    <NavLink><span className='text-white'>Login</span></NavLink>
-                                </LinkContainer>
+                                user && <>
+
+                                    <LinkContainer to='/manageitems'>
+                                        <NavLink> Manage Items</NavLink>
+                                    </LinkContainer>
+                                    <LinkContainer to='/additems'>
+                                        <NavLink> Add Items</NavLink>
+                                    </LinkContainer>
+                                    <LinkContainer to='/myitems'>
+                                        <NavLink>My Items</NavLink>
+                                    </LinkContainer>
+
+
+                                </>
+                            }
+
+                            {
+                                user ?
+                                    <Button onClick={handleLogout} className='text-decoration-none' variant="secondary">Logout</Button>
+
+                                    : <LinkContainer to='/login'>
+                                        <NavLink>Login</NavLink>
+                                    </LinkContainer>
                             }
                         </Nav>
 
