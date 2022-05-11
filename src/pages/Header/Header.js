@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+
 import auth from '../../firebase.init';
 import image4 from '../../images/orange.png';
 
@@ -60,7 +61,6 @@ const Header = () => {
                         </Nav>
 
                     </Navbar.Collapse>
-
                 </Container>
             </Navbar>
         </>
