@@ -5,7 +5,7 @@ const useStockUpdate = id => {
     const [stockUpdate, setStockUpdate] = useState({});
     useEffect(() => {
         const getItemById = async () => {
-            const url = `https://fruits-warehouse.herokuapp.com/inventory/${id}`
+            const url = `http://localhost:8000/inventory/${id}`
             const { data } = await axios.get(url);
             setStockUpdate(data);
         }
