@@ -1,13 +1,31 @@
 import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import useStockUpdate from '../../../hooks/useStockUpdate';
 import img from '../../../images/delivery-truck.png'
 
 const StockUpdate = () => {
     const { id } = useParams();
     const [stockUpdate] = useStockUpdate(id);
-    console.log(stockUpdate)
+    const handleDeliveryButton = () => {
+        console.log(stockUpdate)
+        const item = stockUpdate;
+        const url = `http://localhost:8000/inventory/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(item),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            });
+        toast('user info updated successfully');
+
+  }
     return (
         <>
             <Container>
@@ -28,7 +46,7 @@ const StockUpdate = () => {
 
 
                             {<div className='mt-auto' >
-                                <Button /* onClick={() => navigateToInventory(_id)} */ className='w-100 text-white fw-bold  hover1' variant="danger">Delivery <img className='ms-2' src={img} alt="" /></Button>
+                                <Button onClick={() => handleDeliveryButton(stockUpdate._id)} className='w-100 text-white fw-bold  hover1' variant="danger">Delivery <img className='ms-2' src={img} alt="" /></Button>
                             </div>}
                         </Card.Body>
                     </Card>
