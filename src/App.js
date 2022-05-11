@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
+import AddItems from './pages/AddItems/AddItems';
 import Header from './pages/Header/Header';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
+import ManageItems from './pages/ManageItems/ManageItems';
+import MyItems from './pages/MyItems/MyItems';
 import NotFound from './pages/NotFound/NotFound';
 import Register from './pages/Register/Register';
 
@@ -15,6 +18,9 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/manageitems' element={<ManageItems></ManageItems>}></Route>
+        <Route path='/additems' element={<AddItems></AddItems>}></Route>
+        <Route path='/myitems' element={<MyItems></MyItems>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
