@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const useItems = () => {
+const useInventoryItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
         const getItems = async () => {
-            const { data } = await axios.get('http://fruits-warehouse.herokuapp.com/items');
+            const { data } = await axios.get('http://fruits-warehouse.herokuapp.com/inventory');
             setItems(data);
         };
         getItems();
@@ -14,4 +14,4 @@ const useItems = () => {
     return [items];
 };
 
-export default useItems;
+export default useInventoryItems;

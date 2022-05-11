@@ -1,13 +1,13 @@
 import { Button, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useItems from '../../../hooks/useItems';
+import useInventoryItems from '../../../hooks/useInventoryItems';
 import SingleItem from './SingleItem';
 import image1 from '../../../images/cherry.png';
 import image2 from '../../../images/fruits.png';
 
 
-const Items = () => {
-    const [items] = useItems();
+const InventoryItems = () => {
+    const [items] = useInventoryItems();
     return (
         <div>
             <Container className='my-5'>
@@ -23,4 +23,4 @@ const Items = () => {
     );
 };
 
-export default Items;
+export default InventoryItems;

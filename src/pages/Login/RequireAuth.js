@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useAuthState, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 
@@ -29,7 +29,6 @@ const RequireAuth = ({ children }) => {
                 await sendEmailVerification();
                 toast('Sent email');
             }} className='w-50 mx-auto d-block' variant='info'>Send email verification again?</Button>
-            <ToastContainer></ToastContainer>
         </div>
     }
 

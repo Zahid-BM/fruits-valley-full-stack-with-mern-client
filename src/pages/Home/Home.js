@@ -3,7 +3,7 @@ import PageTitle from '../Shared/PageTitle/PageTitle';
 import Banner from './Banner/Banner';
 import DailyReport from './DailyReport';
 import Footer from './Footer';
-import Items from './Items/Items';
+import InventoryItems from './InventoryItems/InventoryItems';
 import WarehouseProcess from './WarehouseProcess';
 
 
@@ -12,7 +12,7 @@ const Home = () => {
         <div>
             <PageTitle title={'Home'} pageColor={'home-bg'}></PageTitle>
             <Banner></Banner>
-            <Items></Items>
+            <InventoryItems></InventoryItems>
             <DailyReport></DailyReport>
             <WarehouseProcess></WarehouseProcess>
             <Footer></Footer>

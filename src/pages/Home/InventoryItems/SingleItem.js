@@ -1,11 +1,17 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import appImage1 from '../../../images/next.png';
 
 
 const SingleItem = ({ item }) => {
-    const { img, name, price, description, supplierName, stock, quantity } = item;
+    const { _id, img, name, price, description, supplierName, quantity } = item;
+    console.log(_id)
+    const navigate = useNavigate();
+
+    const navigateToInventory = id => {
+        navigate(`/inventory/${id}`)
+    }
     return (
         <>
             <Col className='g-4' lg={4}> {/* hover effect added */}
@@ -22,9 +28,9 @@ const SingleItem = ({ item }) => {
                         </Card.Text>
 
 
-                        {<Link className='mt-auto' to='/checkout'>
-                            <Button className='w-100 text-white fw-bold  hover1' variant="danger">Stock Update <img src={appImage1} alt="" /></Button>
-                        </Link>}
+                        {<div className='mt-auto' >
+                            <Button onClick={() => navigateToInventory(_id)} className='w-100 text-white fw-bold  hover1' variant="danger">Stock Update <img src={appImage1} alt="" /></Button>
+                        </div>}
                     </Card.Body>
                 </Card>
             </Col>
