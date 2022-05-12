@@ -11,6 +11,7 @@ const StockUpdate = () => {
     const [counter, setCounter] = useState(0);
     const [stockUpdate] = useStockUpdate(id, counter);
 
+
     const handleDeliveryButton = () => {
         console.log(stockUpdate)
         const item = stockUpdate;
@@ -28,7 +29,13 @@ const StockUpdate = () => {
                 console.log(data)
             });
         toast('Stock quantity updated after delivery !!!!');
-
+    };
+    const handleRestockFormSubmit = e => {
+        e.preventDefault();
+      
+        const qtty = e.target.number.value;
+        console.log(qtty);
+        e.target.reset();
     };
     return (
         <>
@@ -55,9 +62,9 @@ const StockUpdate = () => {
                             </div>}
                             <div className='w-md-50 mx-auto bg-warning rounded p-4'>
                                 <h4 className='text-center text-danger'>Restock Item</h4>
-                                <Form responsive>
+                                <Form onSubmit={handleRestockFormSubmit}>
                                     <Form.Group className="mb-3 bg-warning p-4" controlId="formBasicEmail">
-                                        <Form.Control type="text" name="number" placeholder="Enter qunatity" />
+                                        <Form.Control type="number" name="number" placeholder="Enter qunatity" />
                                         <Form.Text className="text-muted d-none d-md-block">
                                             Input quantity will be added to the current stock quantity.
                                         </Form.Text>
