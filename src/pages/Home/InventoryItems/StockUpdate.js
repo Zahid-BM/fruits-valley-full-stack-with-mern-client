@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Button, Card, Container } from 'react-bootstrap';
+import { Button, Card, Container, Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useStockUpdate from '../../../hooks/useStockUpdate';
 import img from '../../../images/delivery-truck.png'
+import img1 from '../../../images/add.png'
 
 const StockUpdate = () => {
     const { id } = useParams();
@@ -48,12 +49,32 @@ const StockUpdate = () => {
                             </Card.Text>
 
 
-                            {<div className='mt-auto' >
-                                <Button onClick={() => handleDeliveryButton(stockUpdate._id)} className='w-100 text-white fw-bold  hover1' variant="danger">Delivery <img className='ms-2' src={img} alt="" /></Button>
+
+                            {<div className='mt-auto mx-auto my-5' >
+                                <Button onClick={() => handleDeliveryButton(stockUpdate._id)} className=' text-white fw-bold  hover1' variant="danger">Delivery <img className='ms-2' src={img} alt="" /></Button>
                             </div>}
+                            <div className='w-50 mx-auto bg-warning rounded p-4'>
+                                <h4 className='text-center text-danger'>Restock Item</h4>
+                                <Form responsive>
+                                    <Form.Group className="mb-3 bg-warning p-4" controlId="formBasicEmail">
+                                        <Form.Control type="text" name="number" placeholder="Enter qunatity" />
+                                        <Form.Text className="text-muted">
+                                            Input quantity will be added to the current stock quantity.
+                                        </Form.Text>
+                                    </Form.Group>
+
+
+                                    <Button className='hover1 btn-lg d-block mx-auto' variant="danger" type="submit">
+                                        Restock <img className='ms-2' src={img1} alt="" />
+                                    </Button>
+
+                                </Form>
+                            </div>
+
                         </Card.Body>
                     </Card>
                 </div>
+
             </Container>
         </>
     );
