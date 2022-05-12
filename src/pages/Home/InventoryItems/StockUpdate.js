@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -7,7 +7,9 @@ import img from '../../../images/delivery-truck.png'
 
 const StockUpdate = () => {
     const { id } = useParams();
-    const [stockUpdate] = useStockUpdate(id);
+    const [counter, setCounter] = useState(0);
+    const [stockUpdate] = useStockUpdate(id, counter);
+
     const handleDeliveryButton = () => {
         console.log(stockUpdate)
         const item = stockUpdate;
@@ -21,11 +23,12 @@ const StockUpdate = () => {
         })
             .then(res => res.json())
             .then(data => {
+                setCounter(counter + 1);
                 console.log(data)
             });
-        toast('user info updated successfully');
+        toast('Stock quantity updated after delivery !!!!');
 
-  }
+    };
     return (
         <>
             <Container>

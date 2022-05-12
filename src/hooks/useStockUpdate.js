@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 
-const useStockUpdate = id => {
+const useStockUpdate = (id,counter) => {
     const [stockUpdate, setStockUpdate] = useState({});
     useEffect(() => {
         const getItemById = async () => {
@@ -10,7 +10,7 @@ const useStockUpdate = id => {
             setStockUpdate(data);
         }
         getItemById();
-    }, [id])
+    }, [id, counter])
     return [stockUpdate];
 };
 export default useStockUpdate;
