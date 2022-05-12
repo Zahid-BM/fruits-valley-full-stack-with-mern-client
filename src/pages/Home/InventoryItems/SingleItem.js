@@ -5,8 +5,8 @@ import appImage1 from '../../../images/next.png';
 
 
 const SingleItem = ({ item }) => {
-    const { _id, img, name, price, description, supplierName, quantity } = item;
-    console.log(_id)
+    const { _id, img, name, price, description, supplierName, quantity } =  item ;
+    console.log(item)
     const navigate = useNavigate();
 
     const navigateToInventory = id => {
