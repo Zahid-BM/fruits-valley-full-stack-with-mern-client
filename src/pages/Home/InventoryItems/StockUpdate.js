@@ -53,18 +53,18 @@ const StockUpdate = () => {
                             {<div className='mt-auto mx-auto my-5' >
                                 <Button onClick={() => handleDeliveryButton(stockUpdate._id)} className=' text-white fw-bold  hover1' variant="danger">Delivery <img className='ms-2' src={img} alt="" /></Button>
                             </div>}
-                            <div className='w-50 mx-auto bg-warning rounded p-4'>
+                            <div className='w-md-50 mx-auto bg-warning rounded p-4'>
                                 <h4 className='text-center text-danger'>Restock Item</h4>
                                 <Form responsive>
                                     <Form.Group className="mb-3 bg-warning p-4" controlId="formBasicEmail">
                                         <Form.Control type="text" name="number" placeholder="Enter qunatity" />
-                                        <Form.Text className="text-muted">
+                                        <Form.Text className="text-muted d-none d-md-block">
                                             Input quantity will be added to the current stock quantity.
                                         </Form.Text>
                                     </Form.Group>
 
 
-                                    <Button className='hover1 btn-lg d-block mx-auto' variant="danger" type="submit">
+                                    <Button className='hover1 d-block mx-auto' variant="danger" type="submit">
                                         Restock <img className='ms-2' src={img1} alt="" />
                                     </Button>
 
