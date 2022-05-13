@@ -22,7 +22,7 @@ const AddInventoryItems = () => {
     };
     return (
         <>
-            <PageTitle title={'Additems'} pageColor={'add-item'}></PageTitle>
+            <PageTitle title={'Addinventoryitems'} pageColor={'add-item'}></PageTitle>
             <Container className='my-5'>
                 <h2 className='text-center fw-bolder text-danger mb-5 display-3'>Please input to add a new Item</h2>
                 <form className='w-50 mx-auto d-flex flex-column shadow p-5 rounded-3 additem-bg' onSubmit={handleSubmit(onSubmit)}>
