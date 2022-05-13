@@ -11,7 +11,7 @@ const useInventoryItems = () => {
         };
         getItems();
     }, []);
-    return [items];
+    return [items, setItems];
 };
 
 export default useInventoryItems;
