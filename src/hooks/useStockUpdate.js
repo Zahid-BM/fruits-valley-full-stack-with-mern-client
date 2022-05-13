@@ -11,6 +11,6 @@ const useStockUpdate = (id,counter) => {
         }
         getItemById();
     }, [id, counter])
-    return [stockUpdate];
+    return [stockUpdate, setStockUpdate];
 };
 export default useStockUpdate;
