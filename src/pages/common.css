@@ -6,3 +6,6 @@
     transform: scale(1.05);
     transition: 0.2s;
 }
+.additem-bg{
+    background-image: linear-gradient(#AB46D2, #F8B400);
+}

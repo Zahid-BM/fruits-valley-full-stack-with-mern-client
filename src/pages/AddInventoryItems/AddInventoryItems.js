@@ -24,8 +24,8 @@ const AddInventoryItems = () => {
         <>
             <PageTitle title={'Additems'} pageColor={'add-item'}></PageTitle>
             <Container className='my-5'>
-                <h2 className='text-center fw-bolder text-danger mb-5'>Please input to Add a new Item</h2>
-                <form className='w-25 mx-auto d-flex flex-column shadow px-4 py-5 rounded-3' onSubmit={handleSubmit(onSubmit)}>
+                <h2 className='text-center fw-bolder text-danger mb-5 display-3'>Please input to add a new Item</h2>
+                <form className='w-50 mx-auto d-flex flex-column shadow p-5 rounded-3 additem-bg' onSubmit={handleSubmit(onSubmit)}>
                     <input className='text-center my-2' placeholder='Item Name' {...register("name", { required: true, maxLength: 20 })} />
                     <textarea className='text-center my-2' placeholder='Item Description' {...register("description")} />
                     <input className='text-center my-2' placeholder='Price' type="number" {...register("price")} />
