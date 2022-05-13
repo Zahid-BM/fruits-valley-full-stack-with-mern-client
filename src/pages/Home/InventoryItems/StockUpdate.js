@@ -17,14 +17,15 @@ const StockUpdate = () => {
 
     const handleDeliveryButton = () => {
         console.log(stockUpdate)
-        const item = stockUpdate;
+        const qtty = stockUpdate.quantity;
+        const updatedQtty = parseInt(qtty) - 1;
         const url = `http://localhost:8000/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json',
             },
-            body: JSON.stringify(item),
+            body: JSON.stringify({ updatedQtty }),
         })
             .then(res => res.json())
             .then(data => {
@@ -37,9 +38,8 @@ const StockUpdate = () => {
 
     };
     const onSubmit = data => {
-        const currentQtty = parseInt(stockUpdate.quantity);
-        const newQtty = { ...data, ...currentQtty };
-        console.log(data, currentQtty);
+        const qtty = stockUpdate.quantity;
+        const updatedQtty = parseInt(qtty);
         const url = `http://localhost:8000/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
@@ -47,9 +47,9 @@ const StockUpdate = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(result => {
+            .then(newQtty => {
                 setCounter(counter + 1);
-                console.log(result);
+                console.log(newQtty);
                 toast('Stock quantity updated after delivery !!!!');
             })
 
