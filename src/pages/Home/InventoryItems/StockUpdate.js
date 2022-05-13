@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Button, Card, Container, Form } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useStockUpdate from '../../../hooks/useStockUpdate';
-import img from '../../../images/delivery-truck.png'
-import img1 from '../../../images/add.png'
+import img from '../../../images/delivery-truck.png';
+import img1 from '../../../images/add.png';
+import img2 from '../../../images/fruits.png';
 
 const StockUpdate = () => {
     const { id } = useParams();
@@ -25,17 +26,40 @@ const StockUpdate = () => {
         })
             .then(res => res.json())
             .then(data => {
-                setCounter(counter + 1);
-                console.log(data)
+                if (data.modifiedCount === 1) {
+                    setCounter(counter + 1);
+                    console.log(data)
+                    toast('Stock quantity updated after delivery !!!!');
+                };
+
             });
-        toast('Stock quantity updated after delivery !!!!');
+
     };
     const handleRestockFormSubmit = e => {
         e.preventDefault();
-      
-        const qtty = e.target.number.value;
-        console.log(qtty);
+        const inputQtty = e.target.number.value;
+        const currentQtty = stockUpdate.quantity;
+        const increasedQtty = inputQtty + currentQtty;
+        console.log(increasedQtty);
         e.target.reset();
+        const url = `http://localhost:8000/inventory/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(increasedQtty),
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                setCounter(counter + 1);
+                console.log(data)
+                toast('Stock quantity updated after delivery !!!!');
+
+
+            });
+
     };
     return (
         <>
@@ -70,7 +94,6 @@ const StockUpdate = () => {
                                         </Form.Text>
                                     </Form.Group>
 
-
                                     <Button className='hover1 d-block mx-auto' variant="danger" type="submit">
                                         Restock <img className='ms-2' src={img1} alt="" />
                                     </Button>
@@ -81,7 +104,7 @@ const StockUpdate = () => {
                         </Card.Body>
                     </Card>
                 </div>
-
+                <Link to='/manageinventories'><Button className='btn-lg mx-auto d-block text-white my-5 hover1' variant='danger'>Manage Inventories <img className='ms-1' src={img2} alt="" /></Button></Link>
             </Container>
         </>
     );

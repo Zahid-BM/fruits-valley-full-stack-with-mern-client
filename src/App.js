@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound/NotFound';
 import Register from './pages/Register/Register';
 import RequireAuth from './pages/Login/RequireAuth';
 import StockUpdate from './pages/Home/InventoryItems/StockUpdate';
+import ManageInventories from './pages/ManageInventories/ManageInventories';
 
 function App() {
   return (
@@ -21,12 +22,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/inventory/:id' element={
-          
           <RequireAuth>
             <StockUpdate></StockUpdate>
-            </RequireAuth>
-       
+          </RequireAuth>
         }></Route>
+        <Route path='/manageinventories' element={<ManageInventories></ManageInventories>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/manageitems' element={<ManageItems></ManageItems>}></Route>
