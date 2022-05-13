@@ -8,7 +8,7 @@ const ManageInventories = () => {
     return (
         <>
             <Container>
-                <h1>This is Manage inventories route and this will show all the items from database.</h1>
+                <h1 className='text-center fw-bold display-4 mt-3'>All Inventory Items</h1>
                 <Row>
                     {
                         items.map(item => <IndividualItems key={item._id} item={item}></IndividualItems>)
