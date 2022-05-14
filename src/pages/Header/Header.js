@@ -3,18 +3,24 @@ import React from 'react';
 import { Button, Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
 import auth from '../../firebase.init';
 import image4 from '../../images/orange.png';
+import Loading from '../Shared/Loading/Loading';
 
 
 const Header = () => {
-    const [user] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
+    const navigate = useNavigate()
     const handleLogout = () => {
         signOut(auth);
+        navigate('/home')
         toast('You Logged out. Please login to visit protected page.');
+    };
+
+    if (loading) {
+        return <Loading></Loading>;
     };
 
     return (

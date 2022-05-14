@@ -1,5 +1,4 @@
 import { async } from '@firebase/util';
-import axios from 'axios';
 import React, { useRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -8,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
+import Loading from '../Shared/Loading/Loading';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 
@@ -25,6 +25,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    
 
     const [sendPasswordResetEmail, sending, resetPassError] = useSendPasswordResetEmail(auth); /* clean code */
     const [token] = useToken(user);
@@ -55,6 +57,9 @@ const Login = () => {
             toast('Sent email for password reset');
         }
 
+    };
+    if (loading) {
+        return <Loading></Loading>;
     };
     return (
         <>
