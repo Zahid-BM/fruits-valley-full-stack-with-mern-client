@@ -5,7 +5,7 @@ import useToken from '../../../hooks/useToken';
 import { Button } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
-import image3 from '../../../images/google.png'
+import image3 from '../../../images/google.png';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -24,9 +24,9 @@ const SocialLogin = () => {
     const handleGoogleSignIn = () => {
         signInWithGoogle();
     };
-   /*  if (loading || loading1) {
+    if (loading || loading1) {
         return <Loading></Loading>;
-    }; */
+    };
     return (
         <div>
             <div className='d-flex  align-items-center my-3'>
