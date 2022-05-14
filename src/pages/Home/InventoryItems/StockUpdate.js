@@ -11,7 +11,7 @@ import { useForm } from 'react-hook-form';
 const StockUpdate = () => {
     const { id } = useParams();
     const [counter, setCounter] = useState(0);
-    const [stockUpdate, setStockUpdate] = useStockUpdate(id, counter);
+    const [stockUpdate] = useStockUpdate(id, counter);
     const { register, handleSubmit, reset } = useForm();
 
 
@@ -40,18 +40,18 @@ const StockUpdate = () => {
     };
     const onSubmit = data => {
 
-
+        const updatedQtty = parseInt(data.quantity) + parseInt(stockUpdate.quantity);
         const url = `http://localhost:8000/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },
-            body: JSON.stringify(data)
+            body: JSON.stringify({ updatedQtty })
         })
             .then(res => res.json())
             .then(newQtty => {
                 setCounter(counter + 1);
                 console.log(newQtty);
-                toast('Stock quantity updated after delivery !!!!');
+                toast('Stock quantity updated after adding quantity !!!!');
             })
 
         reset();
@@ -81,7 +81,7 @@ const StockUpdate = () => {
                             <div className='w-md-50 mx-auto bg-warning rounded p-4'>
                                 <h4 className='text-center text-danger'>Restock Item</h4>
                                 <form className='d-flex flex-column shadow p-5 rounded-3 additem-bg' onSubmit={handleSubmit(onSubmit)}>
-                                    <input className='text-center my-2' placeholder='Input Quantity' type="number" {...register("updatedQtty")} />
+                                    <input className='text-center my-2' placeholder='Input Quantity' type="number" {...register("quantity")} />
                                     <small className='text-center text-muted'>To add item please click on the Submit Query button below</small>
                                     <input className='text-center mt-4 w-50 mx-auto bg-danger hover1 border-0 rounded-3 py-2 text-white' type="Submit" />
                                 </form>
