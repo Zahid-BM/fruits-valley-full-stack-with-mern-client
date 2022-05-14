@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
+import Loading from '../Shared/Loading/Loading';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Register = () => {
@@ -43,11 +44,13 @@ const Register = () => {
         toast('Account creation done !!!!');
         console.log(updateProfile());
     };
-
+    if (loading) {
+        return <Loading></Loading>;
+    };
 
     return (
         <div className=' container w-25 mx-auto p-4 shadow my-5 rounded'>
-            <h2 className='text-center text-primary'>Signup</h2>
+            <h2 className='text-center text-danger'>Register</h2>
             <Form onSubmit={handleFormSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail1">
                     <Form.Label>Your Name</Form.Label>
@@ -70,19 +73,19 @@ const Register = () => {
                 </Form.Group>
                 <p className='text-danger'>{error?.message || profileError?.message}</p>
                 {
-                    condition ? <Button variant="primary" type="submit">
+                    condition ? <Button variant="danger" type="submit">
                         Submit
-                    </Button> : <Button disabled variant="primary" type="submit">
+                    </Button> : <Button disabled variant="danger" type="submit">
                         Submit
                     </Button>
                 }
             </Form>
-            <p className='my-4'>Already have an account ? <Link to='/login' className='text-warning text-decoration-none'>Login</Link></p>
+            <p className='my-4'>Already have an account ? <Link to='/login' className='text-warning text-decoration-none '> <span className='text-success'>Login</span></Link></p>
             <SocialLogin></SocialLogin>
             <ToastContainer />
         </div>
     );
 };
-  
+
 
 export default Register;
