@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import useInventoryItems from '../../hooks/useInventoryItems';
 import img1 from '../../images/remove.png'
 
 const IndividualItems = ({ item }) => {
+
     const { _id, img, name, price, supplierName, quantity } = item;
     const [items, setItems] = useInventoryItems();
     console.log(items);
+    
+
 
 
     const handleRemoveBtn = id => {
-        const userConfirmation = window.confirm('Are you sure to delete this Item ? Once delete then it can not be restore')
+        const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
         if (userConfirmation) {
             const url = `http://localhost:8000/inventory/${id}`;
             fetch(url, {
@@ -23,7 +26,6 @@ const IndividualItems = ({ item }) => {
                     if (result.deletedCount === 1) {
                         const remaining = items.filter(item => item._id !== id);
                         console.log(remaining);
-                        // set in the state is not working and filter is not showing perfect result
                         setItems(remaining);
                         toast('Item deleted permanently')
                     }

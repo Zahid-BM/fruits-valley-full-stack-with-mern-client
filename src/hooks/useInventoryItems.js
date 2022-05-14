@@ -10,7 +10,10 @@ const useInventoryItems = () => {
             setItems(data);
         };
         getItems();
+
     }, []);
+
+
     return [items, setItems];
 };
 
