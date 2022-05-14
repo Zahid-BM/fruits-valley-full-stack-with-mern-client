@@ -33,6 +33,8 @@ const Login = () => {
     const [token] = useToken(user);
     console.log(token)
 
+   
+
     if (token) {
         navigate(from, { replace: true });
     };
@@ -48,6 +50,9 @@ const Login = () => {
         }
         console.log(email, password);
     };
+    if (loading) {
+        return <Loading></Loading>;
+    };
     const handleResetPass = async () => {
         const email = emailRef.current.value;
         if (!email) {
@@ -59,9 +64,7 @@ const Login = () => {
         }
 
     };
-  /*   if (loading) {
-        return <Loading></Loading>;
-    }; */
+
     return (
         <>
             <Container className='my-5'>

@@ -46,9 +46,9 @@ const Register = () => {
         toast('Account creation done !!!!');
         console.log(updateProfile());
     };
-   /*  if (loading) {
+    if (loading) {
         return <Loading></Loading>;
-    }; */
+    };
 
     return (
         <Container className='my-5'>
