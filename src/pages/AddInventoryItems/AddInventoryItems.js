@@ -29,7 +29,8 @@ const AddInventoryItems = () => {
                     <input className='text-center my-2' placeholder='Item Name' {...register("name", { required: true, maxLength: 20 })} />
                     <textarea className='text-center my-2' placeholder='Item Description' {...register("description")} />
                     <input className='text-center my-2' placeholder='Price' type="number" {...register("price")} />
-                    <input className='text-center my-2' placeholder='Quantity' type="text" {...register("quantity")} />
+                    <input className='text-center my-2' placeholder='Stock Quantity' type="number" {...register("quantity")} />
+                    <input className='text-center my-2' placeholder='Sold Quantity' type="number" {...register("sold")} />
                     <input className='text-center my-2' placeholder='Supplier Name' type="text" {...register("supplierName")} />
                     <input className='text-center my-2' placeholder='Photo URL' type="text" {...register("img")} />
                     <small className='text-center text-muted'>To add item please click on the Submit Query button below</small>

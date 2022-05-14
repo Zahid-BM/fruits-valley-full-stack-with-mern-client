@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Card, Container, Form } from 'react-bootstrap';
+import { Button, Card, Container } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useStockUpdate from '../../../hooks/useStockUpdate';
