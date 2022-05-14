@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Button, Form, ToastContainer } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row, ToastContainer } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -7,6 +7,8 @@ import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading/Loading';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import image10 from '../../images/register-main.jpg';
+import image11 from '../../images/registration.png';
 
 const Register = () => {
     const userNameRef = useRef('');
@@ -44,46 +46,55 @@ const Register = () => {
         toast('Account creation done !!!!');
         console.log(updateProfile());
     };
-    if (loading) {
+   /*  if (loading) {
         return <Loading></Loading>;
-    };
+    }; */
 
     return (
-        <div className=' container w-25 mx-auto p-4 shadow my-5 rounded'>
-            <h2 className='text-center text-danger'>Register</h2>
-            <Form onSubmit={handleFormSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail1">
-                    <Form.Label>Your Name</Form.Label>
-                    <Form.Control ref={userNameRef} type="text" name='name' placeholder="Enter your name" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
-                </Form.Group>
+        <Container className='my-5'>
+            <h1 className='text-center text-danger display-4 fw-bold'>Please Register to Fruits Valley <img className='me-4' src={image11} alt="" /></h1>
+            <Row>
+                <Col lg={7}>
+                    <img className='w-100 login-register-img' src={image10} alt="" />
+                </Col>
+                <Col className=' container p-4 shadow my-auto rounded' lg={5}>
+                    <h2 className='text-center text-danger'>Register</h2>
+                    <Form onSubmit={handleFormSubmit}>
+                        <Form.Group className="mb-3" controlId="formBasicEmail1">
+                            <Form.Label>Your Name</Form.Label>
+                            <Form.Control ref={userNameRef} type="text" name='name' placeholder="Enter your name" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                            <Form.Text className="text-muted">
+                                We'll never share your email with anyone else.
+                            </Form.Text>
+                        </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check onChange={handleCheckBox} type="checkbox" label="Agree with Fruits Warehouse terms and condition ?" />
-                </Form.Group>
-                <p className='text-danger'>{error?.message || profileError?.message}</p>
-                {
-                    condition ? <Button variant="danger" type="submit">
-                        Submit
-                    </Button> : <Button disabled variant="danger" type="submit">
-                        Submit
-                    </Button>
-                }
-            </Form>
-            <p className='my-4'>Already have an account ? <Link to='/login' className='text-warning text-decoration-none '> <span className='text-success'>Login</span></Link></p>
-            <SocialLogin></SocialLogin>
-            <ToastContainer />
-        </div>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <Form.Check onChange={handleCheckBox} type="checkbox" label="Agree with Fruits Warehouse terms and condition ?" />
+                        </Form.Group>
+                        <p className='text-danger'>{error?.message || profileError?.message}</p>
+                        {
+                            condition ? <Button variant="danger" type="submit">
+                                Submit
+                            </Button> : <Button disabled variant="danger" type="submit">
+                                Submit
+                            </Button>
+                        }
+                    </Form>
+                    <p className='my-4'>Already have an account ? <Link to='/login' className='text-warning text-decoration-none '> <span className='text-success'>Login</span></Link></p>
+                    <SocialLogin></SocialLogin>
+                    <ToastContainer />
+
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

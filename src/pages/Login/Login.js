@@ -59,18 +59,18 @@ const Login = () => {
         }
 
     };
-    if (loading) {
+  /*   if (loading) {
         return <Loading></Loading>;
-    };
+    }; */
     return (
         <>
-            <Container fluid className='my-5'>
-                <h1 className='text-center text-danger display-4 mb-4 fw-bold'>Welcome to Fruits Valley Login Page <img src={image10} alt="" /></h1>
+            <Container className='my-5'>
+                <h1 className='text-center text-danger display-4 fw-bold'>Welcome to Fruits Valley Login Page <img src={image10} alt="" /></h1>
                 <Row>
-                    <Col lg={8}>
+                    <Col lg={7}>
                         <img className='w-100 rounded-3 login-register-img' src={image11} alt="" />
                     </Col>
-                    <Col className='my-auto shadow p-5' lg={4}>
+                    <Col className='my-auto shadow p-5' lg={5}>
                         <h2 className='text-center text-danger'>Login</h2>
                         <Form onSubmit={handleFormSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">

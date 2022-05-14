@@ -24,9 +24,9 @@ const SocialLogin = () => {
     const handleGoogleSignIn = () => {
         signInWithGoogle();
     };
-    if (loading || loading1) {
+   /*  if (loading || loading1) {
         return <Loading></Loading>;
-    };
+    }; */
     return (
         <div>
             <div className='d-flex  align-items-center my-3'>
