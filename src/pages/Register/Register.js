@@ -30,7 +30,6 @@ const Register = () => {
     const handleCheckBox = event => {
         const agree = event.target.checked;
         setCondition(agree);
-
         console.log(condition);
     };
 
