@@ -19,6 +19,7 @@ const StockUpdate = () => {
         console.log(stockUpdate)
         const qtty = stockUpdate.quantity;
         const updatedQtty = parseInt(qtty) - 1;
+        console.log(updatedQtty)
         const url = `http://localhost:8000/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
@@ -38,8 +39,8 @@ const StockUpdate = () => {
 
     };
     const onSubmit = data => {
-        const qtty = stockUpdate.quantity;
-        const updatedQtty = parseInt(qtty);
+
+
         const url = `http://localhost:8000/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
@@ -80,7 +81,7 @@ const StockUpdate = () => {
                             <div className='w-md-50 mx-auto bg-warning rounded p-4'>
                                 <h4 className='text-center text-danger'>Restock Item</h4>
                                 <form className='d-flex flex-column shadow p-5 rounded-3 additem-bg' onSubmit={handleSubmit(onSubmit)}>
-                                    <input className='text-center my-2' placeholder='Input Quantity' type="number" {...register("quantity")} />
+                                    <input className='text-center my-2' placeholder='Input Quantity' type="number" {...register("updatedQtty")} />
                                     <small className='text-center text-muted'>To add item please click on the Submit Query button below</small>
                                     <input className='text-center mt-4 w-50 mx-auto bg-danger hover1 border-0 rounded-3 py-2 text-white' type="Submit" />
                                 </form>
