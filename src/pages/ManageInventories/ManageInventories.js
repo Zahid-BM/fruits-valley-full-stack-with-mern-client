@@ -7,6 +7,7 @@ import image2 from '../../images/add.png'
 
 const ManageInventories = () => {
     const [items] = useInventoryItems();
+
     return (
         <>
             <Container>

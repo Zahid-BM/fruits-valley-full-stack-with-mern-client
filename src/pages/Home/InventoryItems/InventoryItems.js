@@ -6,6 +6,7 @@ import image1 from '../../../images/cherry.png';
 import image2 from '../../../images/fruits.png';
 
 
+
 const InventoryItems = () => {
     const [items] = useInventoryItems();
     return (

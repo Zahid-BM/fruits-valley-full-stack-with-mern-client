@@ -33,7 +33,7 @@ const Login = () => {
     const [token] = useToken(user);
     console.log(token)
 
-   
+
 
     if (token) {
         navigate(from, { replace: true });
@@ -50,7 +50,7 @@ const Login = () => {
         }
         console.log(email, password);
     };
-    if (loading) {
+    if (loading || sending) {
         return <Loading></Loading>;
     };
     const handleResetPass = async () => {

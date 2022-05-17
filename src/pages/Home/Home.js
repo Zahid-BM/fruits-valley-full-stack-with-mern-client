@@ -10,6 +10,7 @@ import WarehouseProcess from './WarehouseProcess';
 const Home = () => {
     return (
         <div>
+            
             <PageTitle title={'Home'} pageColor={'home-bg'}></PageTitle>
             <Banner></Banner>
             <InventoryItems></InventoryItems>

@@ -19,7 +19,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Technology based Warehouse</h3>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Technology based Warehouse</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -30,7 +30,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Expert Monitoring and managements</h3>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Expert Monitoring and managements</h3>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -42,7 +42,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Faster Unloading and i/h</h3>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Faster Unloading and i/h</h3>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -54,7 +54,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Ensure fruits remain fresh</h3>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Ensure fruits remain fresh</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -65,7 +65,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Special Port Facilities</h3>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Special Port Facilities</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -76,7 +76,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block">Fastest delivery on requirements</h3>
+                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Fastest delivery on requirements</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

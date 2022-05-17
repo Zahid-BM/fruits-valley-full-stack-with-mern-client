@@ -19,10 +19,7 @@ const Header = () => {
         toast('You Logged out. Please login to visit protected page.');
     };
 
-    if (loading) {
-        return <Loading></Loading>;
-    };
-
+  
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark" sticky='top'>
