@@ -18,23 +18,10 @@ const MyItems = () => {
         const getMyItems = async () => {
             const email = user?.email;
             console.log(user?.email)
-            const url = `http://localhost:8000/inventory?email=${email}`;
-            try {
-                const { data } = await axios.get(url, {
-                    headers: {
-                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                    }
-                });
+            const url = `http://localhost:8000/add?email=${email}`;
+                const { data } = await axios.get(url)
                 setMyItems(data)
-            }
-            catch (error) {
-                console.log(error?.message)
-                if (error?.response?.status === 401 || error?.response?.status === 403) {
-                    signOut(auth);
-                    navigate('/login')
-                }
-            }
-        };
+            }          
         getMyItems();
     }, [user]);
     const handleRemoveBtn = id => {
@@ -61,7 +48,7 @@ const MyItems = () => {
         <>
             <Container>
                 <div className='my-5'>
-                    <h2 className='text-center mb-4 display-4 fw-bold text-danger'>My Items <img className='ms-3' src={image2} alt="" /></h2>
+                    <h2 className='text-center mb-4 display-4 fw-bold text-danger'>My Items { myItems.length} <img className='ms-3' src={image2} alt="" /></h2>
 
                     <Table responsive variant='danger' className='text-center mt-4 rounded'>
                         <thead>
