@@ -15,6 +15,7 @@ import AddInventoryItems from './pages/AddInventoryItems/AddInventoryItems';
 import Blogs from './pages/Blogs/Blogs';
 import RequestedItems from './pages/RequestedItems/RequestedItems';
 import RequestItem from './pages/RequestItem/RequestItem';
+import PhotoGallery from './pages/PhotoGallery/PhotoGallery';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/gallery' element={<PhotoGallery></PhotoGallery>}></Route>
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <StockUpdate></StockUpdate>
