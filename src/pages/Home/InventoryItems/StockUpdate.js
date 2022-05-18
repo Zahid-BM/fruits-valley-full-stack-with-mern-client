@@ -20,7 +20,7 @@ const StockUpdate = () => {
         const qtty = stockUpdate.quantity;
         const updatedQtty = parseInt(qtty) - 1;
         console.log(updatedQtty)
-        const url = `http://localhost:8000/inventory/${id}`;
+        const url = `https://fruits-warehouse.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -41,7 +41,7 @@ const StockUpdate = () => {
     const onSubmit = data => {
 
         const updatedQtty = parseInt(data.quantity) + parseInt(stockUpdate.quantity);
-        const url = `http://localhost:8000/inventory/${id}`;
+        const url = `https://fruits-warehouse.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },

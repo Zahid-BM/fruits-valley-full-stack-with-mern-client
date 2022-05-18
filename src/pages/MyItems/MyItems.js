@@ -18,7 +18,7 @@ const MyItems = () => {
         const getMyItems = async () => {
             const email = user?.email;
             console.log(user?.email)
-            const url = `http://localhost:8000/add?email=${email}`;
+            const url = `https://fruits-warehouse.herokuapp.com/add?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -40,7 +40,7 @@ const MyItems = () => {
     const handleRemoveBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
         if (userConfirmation) {
-            const url = `http://localhost:8000/add/${id}`;
+            const url = `https://fruits-warehouse.herokuapp.com/add/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

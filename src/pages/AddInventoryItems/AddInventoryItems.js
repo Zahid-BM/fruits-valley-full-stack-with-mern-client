@@ -25,7 +25,7 @@ const AddInventoryItems = () => {
 
 
         };
-        const url = 'http://localhost:8000/add';
+        const url = 'https://fruits-warehouse.herokuapp.com/add';
 
         axios.post(url, newItem)
             .then(res => {

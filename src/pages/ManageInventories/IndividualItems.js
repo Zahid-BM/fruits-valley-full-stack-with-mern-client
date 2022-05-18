@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import useInventoryItems from '../../hooks/useInventoryItems';
@@ -9,14 +8,10 @@ const IndividualItems = ({ item }) => {
     const { _id, img, name, price, supplierName, quantity } = item;
     const [items, setItems] = useInventoryItems();
     console.log(items);
-    
-
-
-
     const handleRemoveBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
         if (userConfirmation) {
-            const url = `http://localhost:8000/inventory/${id}`;
+            const url = `https://fruits-warehouse.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -27,6 +22,7 @@ const IndividualItems = ({ item }) => {
                         const remaining = items.filter(item => item._id !== id);
                         console.log(remaining);
                         setItems(remaining);
+                        window.location.reload(items)
                         toast('Item deleted permanently')
                     }
                 })
