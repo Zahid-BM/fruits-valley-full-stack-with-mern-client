@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import image1 from '../../images/remove.png';
 import image2 from '../../images/harvest.png';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 
 const MyItems = () => {
@@ -60,6 +61,7 @@ const MyItems = () => {
     return (
         <>
             <Container>
+                <PageTitle title={'MyItems'} pageColor={'blogs-bg'}></PageTitle>
                 <div className='my-5'>
                     <h2 className='text-center mb-4 display-4 fw-bold text-danger'>My Items {myItems.length} <img className='ms-3' src={image2} alt="" /></h2>
 

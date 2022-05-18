@@ -2,11 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AddItems from './pages/AddItems/AddItems';
 import Header from './pages/Header/Header';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
-import ManageItems from './pages/RequestedItems/RequestedItems';
 import MyItems from './pages/MyItems/MyItems';
 import NotFound from './pages/NotFound/NotFound';
 import Register from './pages/Register/Register';
@@ -16,6 +14,7 @@ import ManageInventories from './pages/ManageInventories/ManageInventories';
 import AddInventoryItems from './pages/AddInventoryItems/AddInventoryItems';
 import Blogs from './pages/Blogs/Blogs';
 import RequestedItems from './pages/RequestedItems/RequestedItems';
+import RequestItem from './pages/RequestItem/RequestItem';
 
 function App() {
   return (
@@ -35,7 +34,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/requesteditems' element={<RequestedItems></RequestedItems>}></Route>
-        <Route path='/additems' element={<AddItems></AddItems>}></Route>
+        <Route path='/requestitem' element={<RequestItem></RequestItem>}></Route>
         <Route path='/myitems' element={
           <RequireAuth>
             <MyItems></MyItems>

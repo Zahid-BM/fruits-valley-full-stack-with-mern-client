@@ -45,8 +45,8 @@ const Header = () => {
                                     <LinkContainer to='/requesteditems'>
                                         <NavLink> Requested Items</NavLink>
                                     </LinkContainer>
-                                    <LinkContainer to='/additems'>
-                                        <NavLink> Add Items</NavLink>
+                                    <LinkContainer to='/requestitem'>
+                                        <NavLink> Request Item</NavLink>
                                     </LinkContainer>
                                     <LinkContainer to='/myitems'>
                                         <NavLink>My Items</NavLink>
