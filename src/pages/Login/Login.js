@@ -27,13 +27,9 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-
-
     const [sendPasswordResetEmail, sending, resetPassError] = useSendPasswordResetEmail(auth); /* clean code */
     const [token] = useToken(user);
     console.log(token)
-
-
 
     if (token) {
         navigate(from, { replace: true });
@@ -55,14 +51,16 @@ const Login = () => {
     };
     const handleResetPass = async () => {
         const email = emailRef.current.value;
-        if (!email) {
-            return toast('Please input your email')
+        const confirmation = window.confirm('To reset your password you must input your email address correctly. The email is correct?')
+        if (confirmation) {
+            if (!email) {
+                return toast('Please input your email')
+            }
+            else {
+                await sendPasswordResetEmail(email);
+                toast('Sent email for password reset');
+            }
         }
-        else {
-            await sendPasswordResetEmail(email);
-            toast('Sent email for password reset');
-        }
-
     };
 
     return (
@@ -88,7 +86,7 @@ const Login = () => {
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                             </Form.Group>
-                            <p className='text-danger my-2'>{error?.message}</p>
+                            <p className='text-danger my-2'>{error?.message || resetPassError?.message}</p>
                             <p className='my-3'>Forget password ?<Button onClick={handleResetPass} className='text-decoration-none' variant="link">Reset password.</Button> </p>
                             <Button className='d-block w-75 mx-auto' variant="danger" type="submit">
                                 Login
