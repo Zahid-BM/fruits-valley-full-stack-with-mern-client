@@ -14,6 +14,7 @@ import RequireAuth from './pages/Login/RequireAuth';
 import StockUpdate from './pages/Home/InventoryItems/StockUpdate';
 import ManageInventories from './pages/ManageInventories/ManageInventories';
 import AddInventoryItems from './pages/AddInventoryItems/AddInventoryItems';
+import Blogs from './pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <StockUpdate></StockUpdate>

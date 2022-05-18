@@ -16,7 +16,9 @@ const InventoryItems = () => {
                 <Row>
                     {
                         items.slice(0, 6).map(item => <SingleItem key={item._id} item={item}></SingleItem>)
+                        
                     }
+                    
                 </Row>
                 <Link to='/manageinventories'><Button className='btn-lg mx-auto d-block text-white my-5 hover1' variant='danger'>Manage Inventories <img className='ms-1' src={image2} alt="" /></Button></Link>
             </Container>

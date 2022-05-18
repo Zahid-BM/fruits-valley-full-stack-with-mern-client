@@ -19,7 +19,7 @@ const Header = () => {
         toast('You Logged out. Please login to visit protected page.');
     };
 
-  
+
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark" sticky='top'>
@@ -30,6 +30,9 @@ const Header = () => {
                         <Nav className="me-auto">
                             <LinkContainer to='/home'>
                                 <NavLink>Home</NavLink>
+                            </LinkContainer>
+                            <LinkContainer to='/blogs'>
+                                <NavLink>Blogs</NavLink>
                             </LinkContainer>
 
                         </Nav>

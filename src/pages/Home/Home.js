@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import Banner from './Banner/Banner';
 import DailyReport from './DailyReport';
@@ -8,6 +8,7 @@ import WarehouseProcess from './WarehouseProcess';
 
 
 const Home = () => {
+
     return (
         <div>
             
@@ -17,6 +18,7 @@ const Home = () => {
             <DailyReport></DailyReport>
             <WarehouseProcess></WarehouseProcess>
             <Footer></Footer>
+            
         </div>
     );
 };
