@@ -42,8 +42,8 @@ const Header = () => {
                             {
                                 user && <>
 
-                                    <LinkContainer to='/manageitems'>
-                                        <NavLink> Manage Items</NavLink>
+                                    <LinkContainer to='/requesteditems'>
+                                        <NavLink> Requested Items</NavLink>
                                     </LinkContainer>
                                     <LinkContainer to='/additems'>
                                         <NavLink> Add Items</NavLink>

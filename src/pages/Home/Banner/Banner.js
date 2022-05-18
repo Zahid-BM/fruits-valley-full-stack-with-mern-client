@@ -10,7 +10,7 @@ import img6 from '../../../images/banner/6.jpg';
 const Banner = () => {
     return (
 
-        <Container fluid >
+        <Container fluid className='mt-3' >
             <Carousel>
                 <Carousel.Item>
                     <img
