@@ -27,7 +27,7 @@ const MyItems = () => {
     const handleRemoveBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
         if (userConfirmation) {
-            const url = `http://localhost:8000/inventory/${id}`;
+            const url = `http://localhost:8000/add/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
