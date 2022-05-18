@@ -15,7 +15,7 @@ const AddInventoryItems = () => {
             email: user?.email,
             name: event.target.itemName.value,
             description: event.target.description.value,
-            price: event.target.description.value,
+            price: event.target.price.value,
             quantity: event.target.quantity.value,
             sold: event.target.sold.value,
             supplierName: event.target.supplierName.value,
