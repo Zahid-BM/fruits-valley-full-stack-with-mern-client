@@ -39,7 +39,7 @@ const RequestItem = () => {
             <PageTitle title={'RequestItem'} pageColor={'add-item'}></PageTitle>
             <Container className='mb-4'>
                 <h3 className='text-center fw-bolder text-warning mb-5 mt-3 display-6'>
-                    If Your Desired Item is not on our site then you can add below</h3>
+                    You can request your desired items here</h3>
 
                 <Row>
                     <Col lg={7}>
