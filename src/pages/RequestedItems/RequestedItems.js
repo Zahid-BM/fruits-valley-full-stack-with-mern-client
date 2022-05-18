@@ -9,7 +9,7 @@ const RequestedItems = () => {
 
     useEffect(() => {
 
-        const url = 'http://fruits-warehouse.herokuapp.com/requested';
+        const url = 'https://fruits-warehouse.herokuapp.com/requested';
         fetch(url)
             .then(res => res.json())
             .then(data => {
