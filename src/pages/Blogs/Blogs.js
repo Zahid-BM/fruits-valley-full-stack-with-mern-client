@@ -9,32 +9,33 @@ const Blogs = () => {
         <>
             <PageTitle title={'Blogs'} pageColor={'blogs-bg'}></PageTitle>
             <Container >
-                <h1 className='text-center text-danger display-4 mt-5 mb-3'>The questions to be answered <img src={image1} alt="" /></h1>
+                <h1 className='text-center fw-bold text-danger display-4 mt-5 mb-3'>The questions to be answered <img src={image1} alt="" /></h1>
                 <Row>
-                    <Col className='my-auto py-5' lg={7}>
+                    <Col className='my-auto py-5 my-auto ' lg={7}>
                         <Accordion defaultActiveKey="0">
-                            <Accordion.Item className='bg-info text-white' eventKey="0">
-                                <Accordion.Header >What is the difference between authorization and authentication?</Accordion.Header>
+                            <Accordion.Item className='bg-danger text-white' eventKey="0">
+                                <Accordion.Header >What are the difference between JavaScrips and Nodejs?</Accordion.Header>
                                 <Accordion.Body>
-                                    Authentication is a process by which something/someone can be checked and verified the authenticity of identity or ownerships etc. And authorization is a process by which giving some access or ownership to certain things.
+                                    JavaScript basically a scripting language that is used for client side scripting at the primary level and built into java and HTML.On the other hand, Nodejs is a server side scripting programming language based on the google V8 Engine. Beside, javascript runs almost all browsers and nodejs is an environment to run javascript.
+
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item className='bg-info text-white' eventKey="1">
-                                <Accordion.Header>Why are you using firebase? What other options do you have to implement authentication?</Accordion.Header>
+                            <Accordion.Item className='bg-danger text-white' eventKey="1">
+                                <Accordion.Header>When should you use nodejs and when should you use mongodb?</Accordion.Header>
                                 <Accordion.Body>
-                                    Firebase is famous for it's easier ways to use SDKs, provides backend services, rich ready made UI library and has almost all social media account authentication facilities. For all these reason I use firebase. There are other popular alternatives to firebase like Parse, Back4app, Kuzzle, Pubnub etc.
+                                    To answer this question we should know that, Nodejs is a run time environment/engine to run javascript programming language and mongodb is database engine and used for storing data. Now the answer is when we want to run javascript programming language to work server side or connect to database then we should use nodejs. On the other hand, if we want to handle data like update, delete or crud operation efficiently in the nosql database then we should use Mongodb.
                                 </Accordion.Body>
                             </Accordion.Item>
-                            <Accordion.Item className='bg-info text-white' eventKey="2">
-                                <Accordion.Header>What other services does firebase provide other than authentication ?</Accordion.Header>
+                            <Accordion.Item className='bg-danger text-white' eventKey="2">
+                                <Accordion.Header>What are the difference between SQL and NoSQL database?</Accordion.Header>
                                 <Accordion.Body>
-                                    Firebase has become this much popular because it provides a varieties of services other than authentication. It provides Cloud Firestore, Cloud Functions, Hosting, Cloud Storage, Google Analytics, Predictions, Cloud Messaging and so on alongside authentication.
+                                    SQL stands for Structured Query Language and NoSQL stands for Not only Structured Query Language. SQL is a rational database and NoSQL is a non-rational language. SQL has static schema and NoSQL has a dynamic schema. SQL database is Vertically Scalable and Nosql  is Horizontally scalable. Most significantly for this Nosql is more lightweight and more famous.
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
                     </Col>
                     <Col className='py-5' lg={5}>
-                        <img className='w-100 rounded-3' src="https://cdn.pixabay.com/photo/2021/11/14/19/04/programming-6795536_960_720.png" alt="" />
+                        <img className='w-100 rounded-3' src="https://cdn.pixabay.com/photo/2010/12/13/10/03/question-marks-2215_960_720.jpg" alt="" />
                     </Col>
                 </Row>
             </Container>
