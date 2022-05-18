@@ -24,7 +24,6 @@ const RequestItem = () => {
         axios.post(url, newItem)
             .then(res => {
                 const { data } = res;
-                console.log(res);
                 if (data.insertedId) {
                     toast('Success !!! You have added a new item.')
                     event.target.reset();

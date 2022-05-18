@@ -16,10 +16,8 @@ const StockUpdate = () => {
 
 
     const handleDeliveryButton = () => {
-        console.log(stockUpdate)
         const qtty = stockUpdate.quantity;
         const updatedQtty = parseInt(qtty) - 1;
-        console.log(updatedQtty)
         const url = `https://fruits-warehouse.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
@@ -32,7 +30,6 @@ const StockUpdate = () => {
             .then(data => {
                 if (data.modifiedCount === 1) {
                     setCounter(counter + 1);
-                    console.log(data)
                     toast('Stock quantity updated after delivery !!!!');
                 };
             });
@@ -50,7 +47,6 @@ const StockUpdate = () => {
             .then(res => res.json())
             .then(newQtty => {
                 setCounter(counter + 1);
-                console.log(newQtty);
                 toast('Stock quantity updated after adding quantity !!!!');
             })
 

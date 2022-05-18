@@ -7,11 +7,10 @@ const useToken = user => {
 
     useEffect(() => {
         const getToken = async () => {
-            console.log(user)
             const email = user?.user?.email;
             if (email) {
                 const { data /* destructured */ } = await axios.post('https://fruits-warehouse.herokuapp.com/login', { email });
-                console.log(data);
+
                 setToken(data.accessToken);
                 localStorage.setItem('accessToken', data.accessToken);
             }

@@ -28,7 +28,6 @@ const AddInventoryItems = () => {
         axios.post(url, newItem)
             .then(res => {
                 const { data } = res;
-                console.log(res);
                 if (data.insertedId) {
                     toast('Success !!! You have added a new item.')
                     event.target.reset();
@@ -73,7 +72,7 @@ const AddInventoryItems = () => {
                         <Form.Control required className='text-center' type="text" name='supplierName' placeholder="supplier's name" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword8">
-                        <Form.Control required className='text-center' type="text" name='image' placeholder="item's photo url" />
+                        <Form.Control className='text-center' type="text" name='image' placeholder="item's photo url" />
                     </Form.Group>
 
                     <Button className='w-50 mx-auto bg-danger hover1 border-0' variant="primary" type="submit">

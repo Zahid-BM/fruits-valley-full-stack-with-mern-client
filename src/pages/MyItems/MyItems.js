@@ -18,7 +18,6 @@ const MyItems = () => {
     useEffect(() => {
         const getMyItems = async () => {
             const email = user?.email;
-            console.log(user?.email)
             const url = `https://fruits-warehouse.herokuapp.com/add?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
@@ -29,7 +28,6 @@ const MyItems = () => {
                 setMyItems(data)
             }
             catch (err) {
-                console.log(err.message)
                 if (err.response.status === 401 || err.response.status === 403) {
                     signOut(auth)
                     navigate('/login')
@@ -47,7 +45,6 @@ const MyItems = () => {
             })
                 .then(res => res.json())
                 .then(result => {
-                    console.log(result)
                     if (result.deletedCount === 1) {
                         const remaining = myItems.filter(myItem => myItem._id !== id);
                         setMyItems(remaining)

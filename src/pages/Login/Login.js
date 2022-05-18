@@ -29,7 +29,6 @@ const Login = () => {
 
     const [sendPasswordResetEmail, sending, resetPassError] = useSendPasswordResetEmail(auth); /* clean code */
     const [token] = useToken(user);
-    console.log(token)
 
     if (token) {
         navigate(from, { replace: true });
@@ -44,7 +43,6 @@ const Login = () => {
         if (user) {
             toast('login success');
         }
-        console.log(email, password);
     };
     if (loading || sending) {
         return <Loading></Loading>;

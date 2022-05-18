@@ -33,7 +33,6 @@ const Register = () => {
     const handleCheckBox = event => {
         const agree = event.target.checked;
         setCondition(agree);
-        console.log(condition);
     };
 
     const handleFormSubmit = async event => {
@@ -44,7 +43,6 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: userName });
         toast('Account creation done !!!!');
-        console.log(updateProfile());
     };
     if (loading) {
         return <Loading></Loading>;

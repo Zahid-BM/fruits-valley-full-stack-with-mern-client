@@ -7,7 +7,6 @@ const IndividualItems = ({ item }) => {
 
     const { _id, img, name, price, supplierName, quantity } = item;
     const [items, setItems] = useInventoryItems();
-    console.log(items);
     const handleRemoveBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
         if (userConfirmation) {
@@ -17,10 +16,8 @@ const IndividualItems = ({ item }) => {
             })
                 .then(res => res.json())
                 .then(result => {
-                    console.log(result)
                     if (result.deletedCount === 1) {
                         const remaining = items.filter(item => item._id !== id);
-                        console.log(remaining);
                         setItems(remaining);
                         window.location.reload(items)
                         toast('Item deleted permanently')
