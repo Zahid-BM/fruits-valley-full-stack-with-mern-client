@@ -23,7 +23,7 @@ const Register = () => {
         loading,
         error
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile, updating, profileError] = useUpdateProfile(auth);
+    const [updateProfile, profileError] = useUpdateProfile(auth);
     const [token] = useToken(user);
 
     if (token) {

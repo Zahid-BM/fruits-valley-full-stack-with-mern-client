@@ -12,7 +12,7 @@ import PageTitle from '../Shared/PageTitle/PageTitle';
 
 
 const MyItems = () => {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [myItems, setMyItems] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {

@@ -7,11 +7,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import image4 from '../../images/orange.png';
-import Loading from '../Shared/Loading/Loading';
 
 
 const Header = () => {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const navigate = useNavigate()
     const handleLogout = () => {
         signOut(auth);
