@@ -10,6 +10,7 @@ This is a fullstack React SPA website with Fully Performing CRUD operations. Thi
 
 ## Key points of the website
 
+* A full stack project with MERN
 * Fully performing CRUD operation
 * Firebase authentication
 * Social login alongside email and password
