@@ -6,11 +6,10 @@ Backend/server side code GitHub repo [Visit](https://github.com/ProgrammingHeroW
 
 # About this site
 
-This is a fullstack React SPA website with Fully Performing CRUD operations. This site is made by myself for assignment 11.
+This is a full stack website with Fully Performing CRUD operations with MERN stack and made by myself.
 
 ## Key points of the website
 
-* A full stack project with MERN
 * Fully performing CRUD operation
 * Firebase authentication
 * Social login alongside email and password
