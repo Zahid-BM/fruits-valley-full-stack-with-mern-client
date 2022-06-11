@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Container } from 'react-bootstrap';
+import { Card, Carousel } from 'react-bootstrap';
 import img1 from '../../../images/banner/1.jpg';
 import img2 from '../../../images/banner/2.jpg';
 import img3 from '../../../images/banner/3.jpg';
@@ -10,77 +10,58 @@ import img6 from '../../../images/banner/6.jpg';
 const Banner = () => {
     return (
 
-        <Container fluid className='mt-3' >
+        < >
             <Carousel>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100  "
-                        src={img1}
-                        alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Technology based Warehouse</h3>
-                    </Carousel.Caption>
+                    <Card className="bg-dark text-white">
+                        <Card.Img className='opacity-25' src={img1} alt="Card image" />
+                        <Card.ImgOverlay>
+                            <Card.Title className=' display-2 text-white-50 d-none d-sm-block text-center'>Technology based Warehouse</Card.Title>
+                        </Card.ImgOverlay>
+                    </Card>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100  "
-                        src={img2}
-                        alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Expert Monitoring and managements</h3>
-
-                    </Carousel.Caption>
+                    <Card className="bg-dark text-white">
+                        <Card.Img className='opacity-25' src={img2} alt="Card image" />
+                        <Card.ImgOverlay>
+                            <Card.Title className=' display-2 text-white-50 d-none d-sm-block text-center'>Expert Monitoring and managements</Card.Title>
+                        </Card.ImgOverlay>
+                    </Card>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100  "
-                        src={img3}
-                        alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Faster Unloading and i/h</h3>
-
-                    </Carousel.Caption>
+                    <Card className="bg-dark text-white">
+                        <Card.Img className='opacity-25' src={img3} alt="Card image" />
+                        <Card.ImgOverlay>
+                            <Card.Title className=' display-2 text-white-50 d-none d-sm-block text-center'>Faster Unloading and i/h</Card.Title>
+                        </Card.ImgOverlay>
+                    </Card>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100  "
-                        src={img4}
-                        alt="Fourth slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Ensure fruits remain fresh</h3>
-                    </Carousel.Caption>
+                    <Card className="bg-dark text-white">
+                        <Card.Img className='opacity-25' src={img4} alt="Card image" />
+                        <Card.ImgOverlay>
+                            <Card.Title className=' display-2 text-white-50 d-none d-sm-block text-center'>We ensure fruits remain fresh</Card.Title>
+                        </Card.ImgOverlay>
+                    </Card>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100  "
-                        src={img5}
-                        alt="Fifth slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Special Port Facilities</h3>
-                    </Carousel.Caption>
+                    <Card className="bg-dark text-white">
+                        <Card.Img className='opacity-25' src={img5} alt="Card image" />
+                        <Card.ImgOverlay>
+                            <Card.Title className=' display-2 text-white-50 d-none d-sm-block text-center'>Special Port Facilities</Card.Title>
+                        </Card.ImgOverlay>
+                    </Card>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100  "
-                        src={img6}
-                        alt="Sixth slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3 className="display-1 fw-bolder text-warning d-none d-md-block mb-5">Fastest delivery on requirements</h3>
-                    </Carousel.Caption>
+                    <Card className="bg-dark text-white">
+                        <Card.Img className='opacity-25' src={img6} alt="Card image" />
+                        <Card.ImgOverlay>
+                            <Card.Title className=' display-2 text-white-50 d-none d-sm-block text-center'>Fastest delivery on requirements</Card.Title>
+                        </Card.ImgOverlay>
+                    </Card>
                 </Carousel.Item>
             </Carousel>
-        </Container>
+        </>
 
     );
 };
