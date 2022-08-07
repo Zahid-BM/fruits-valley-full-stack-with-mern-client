@@ -10,7 +10,7 @@ A Full Stack mobile responsive Trims Manufacturer Website with MERN.
 
 ## Key points of the website
 
-* ser can create an account with email verification, login  and can do password reset if password is forgotten.
+* User can create an account with email verification, login  and can do password reset if password is forgotten.
 * A user can visit but can not order until having an account coz Order page is a protected route. Social login is added to make that easier. But without email verification no user can.order any item.
 * Registered user will have a fully functional CRUD operation experience. They can restock items, can deliver the items. If deliver then item quantity will be decreased and if restock then item quantity will be increased in the database. And updated data will be displayed on UI.
 * User can request an item to stock and the user input will be stored in the database. User also can see all user's requested products in the Requested Items Page.
