@@ -1,7 +1,7 @@
 # Fuits Valley
 
 Live website hosted in firebase [Visit Live website](https://fruits-warehouse-f1061.web.app/).
-Backend/server side code is hosted in Heroku [Visit](https://fruits-warehouse.herokuapp.com/).
+Backend/server side code is hosted in Heroku [Visit](https://fruits-valley.onrender.com/).
 Backend/server side code GitHub repo [Visit](https://github.com/Zahid-BM/fruits-valley-backend).
 
 # About this site

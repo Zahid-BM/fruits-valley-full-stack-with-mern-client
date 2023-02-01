@@ -10,7 +10,7 @@ const IndividualItems = ({ item }) => {
     const handleRemoveBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
         if (userConfirmation) {
-            const url = `https://fruits-warehouse.herokuapp.com/inventory/${id}`;
+            const url = `https://fruits-valley.onrender.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -18,7 +18,7 @@ const StockUpdate = () => {
     const handleDeliveryButton = () => {
         const qtty = stockUpdate.quantity;
         const updatedQtty = parseInt(qtty) - 1;
-        const url = `https://fruits-warehouse.herokuapp.com/inventory/${id}`;
+        const url = `https://fruits-valley.onrender.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -38,7 +38,7 @@ const StockUpdate = () => {
     const onSubmit = data => {
 
         const updatedQtty = parseInt(data.quantity) + parseInt(stockUpdate.quantity);
-        const url = `https://fruits-warehouse.herokuapp.com/inventory/${id}`;
+        const url = `https://fruits-valley.onrender.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },

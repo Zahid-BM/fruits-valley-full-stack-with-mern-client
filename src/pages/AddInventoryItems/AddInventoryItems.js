@@ -23,7 +23,7 @@ const AddInventoryItems = () => {
 
 
         };
-        const url = 'https://fruits-warehouse.herokuapp.com/add';
+        const url = 'https://fruits-valley.onrender.com/add';
 
         axios.post(url, newItem)
             .then(res => {

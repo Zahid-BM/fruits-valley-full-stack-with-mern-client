@@ -7,7 +7,7 @@ const useInventoryItems = () => {
 
     useEffect(() => {
         const getItems = async () => {
-            const { data } = await axios.get('https://fruits-warehouse.herokuapp.com/inventory');
+            const { data } = await axios.get('https://fruits-valley.onrender.com/inventory');
             setItems(data);
         };
         getItems();

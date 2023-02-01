@@ -19,7 +19,7 @@ const RequestItem = () => {
 
 
         };
-        const url = 'https://fruits-warehouse.herokuapp.com/requested';
+        const url = 'https://fruits-valley.onrender.com/requested';
 
         axios.post(url, newItem)
             .then(res => {
