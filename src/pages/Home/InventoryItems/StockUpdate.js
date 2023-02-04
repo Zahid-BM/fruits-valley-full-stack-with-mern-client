@@ -29,7 +29,7 @@ const StockUpdate = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount === 1) {
-                    setCounter(counter + 1);
+                    setCounter(counter + 1); /* I should write setCounter(counter -1) but wrote +1. Surprisingly it's working. May be some day I can understand */
                     toast('Stock quantity updated after delivery !!!!');
                 };
             });
